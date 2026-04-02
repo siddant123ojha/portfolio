@@ -214,7 +214,8 @@ st.markdown("""
     background: linear-gradient(145deg,#f3eeff 0%,#e4f5ff 55%,#f0eaff 100%);
     font-family:'Nunito',sans-serif; color:var(--dark);
 }
-#MainMenu,footer,header{visibility:hidden!important;}
+#MainMenu,footer{visibility:hidden!important;}
+[data-testid="stHeader"]{background:transparent!important;}
 .block-container{padding:1.8rem 2.5rem 3rem!important;max-width:1150px!important;}
 
 /* ── SIDEBAR ── */
@@ -379,6 +380,23 @@ div[data-testid="stRadio"]>div>label[aria-checked="true"]{
 .stTextInput>div>div>input,.stTextArea>div>div>textarea{
     border-radius:var(--rsm)!important;border:1.5px solid var(--lav2)!important;
     font-family:'Nunito',sans-serif!important;}
+
+/* ── RESPONSIVE / MOBILE ── */
+@media (max-width: 768px) {
+    .block-container { padding: 1.5rem 1rem 3rem !important; }
+    .hero-card { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; text-align: center; }
+    .hero-photo { width: 140px; height: 140px; }
+    .hero-name { font-size: 2.2rem; }
+    .badge-row { justify-content: center; }
+    .about-card { padding: 2rem 1.5rem; }
+    .about-photo { float: none; display: block; margin: 0 auto 1.5rem; width: 140px; height: 140px; }
+    .stats-row { gap: 0.8rem; }
+    .stat-card { min-width: 45%; padding: 1rem 0.5rem; }
+    .stat-num { font-size: 1.6rem; }
+    .cert-detail-img { padding: 1rem; max-height: 300px; }
+    .cert-detail-body { padding: 1.2rem; }
+    .video-wrap { padding: 1rem; }
+}
 </style>
 """, unsafe_allow_html=True)
 
